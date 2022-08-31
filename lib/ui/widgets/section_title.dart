@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../../../constants/size_config.dart';
+import '../../constants/size_config.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;

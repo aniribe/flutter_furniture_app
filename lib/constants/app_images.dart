@@ -7,4 +7,6 @@ class AppImages {
   static const String scanIcon = 'assets/images/scan.svg';
   static const String searchIcon = 'assets/images/search.svg';
   static const String userIcon = 'assets/images/user.svg';
+  static const String rippleIcon = 'assets/images/ripple.gif';
+  static const String spinnerIcon = 'assets/images/spinner.gif';
 }
