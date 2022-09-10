@@ -1,18 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import '../../../../constants/size_config.dart';
-import '../../../../constants/string_constants.dart';
 import '../../../widgets/section_title.dart';
 
 class CategoryTitle extends StatelessWidget {
+  final String title;
+
   const CategoryTitle({
     Key? key,
+    required this.title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(SizeConfig.defaultSize! * 2),
-      child: const SectionTitle(title: StringConstants.browseByCategories),
+      child: SectionTitle(title: title),
     );
   }
 }
