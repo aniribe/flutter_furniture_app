@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import '../../../../constants/app_colors.dart';
 import '../../../../constants/app_images.dart';
 import '../../../../constants/size_config.dart';

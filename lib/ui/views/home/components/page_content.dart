@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/ui/views/home/components/recommend_products_section.dart';
 import '../../../../constants/app_colors.dart';
 import '../../../../constants/string_constants.dart';
+import '../../../../models/product.dart';
 import '../../../ui_util/ui_helpers.dart';
+import '../home_viewmodel.dart';
 import 'categories_section.dart';
 import 'category_title.dart';
 
 class PageContent extends StatelessWidget {
+  final HomeViewModel model;
+
   const PageContent({
     Key? key,
+    required this.model,
   }) : super(key: key);
 
   @override
@@ -22,7 +27,9 @@ class PageContent extends StatelessWidget {
         Divider(height: 5, color: AppColors.textColor.withOpacity(0.5)),
         verticalSpace(10),
         const CategoryTitle(title: StringConstants.recommendsForYou),
-        const RecommendProductsSection(),
+        RecommendProductsSection(
+          onTap: () => model.onProductTapedHandler(product),
+        ),
       ],
     );
   }

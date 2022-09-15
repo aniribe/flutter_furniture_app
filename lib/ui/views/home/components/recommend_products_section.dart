@@ -5,8 +5,11 @@ import '../../../../services/fetch_products.dart';
 import 'loader.dart';
 
 class RecommendProductsSection extends StatelessWidget {
+  final Function() onTap;
+
   const RecommendProductsSection({
     Key? key,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -16,6 +19,7 @@ class RecommendProductsSection extends StatelessWidget {
       builder: (context, snapshot) => snapshot.hasData
           ? RecommendProducts(
               products: snapshot.data as List<Product>,
+              onTap: onTap,
             )
           : const Loader(),
     );

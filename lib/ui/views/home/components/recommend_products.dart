@@ -5,10 +5,12 @@ import '../../../../models/product.dart';
 
 class RecommendProducts extends StatelessWidget {
   final List<Product> products;
+  final Function() onTap;
 
   const RecommendProducts({
     Key? key,
     required this.products,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -28,7 +30,7 @@ class RecommendProducts extends StatelessWidget {
         ),
         itemBuilder: (context, index) => ProductCard(
           product: products[index],
-          onTap: () {},
+          onTap: onTap,
         ),
       ),
     );

@@ -14,9 +14,9 @@ class HomeView extends StatelessWidget {
       onModelReady: (model) => model.onInit(context),
       builder: (context, model, child) => Scaffold(
         appBar: buildAppBar(),
-        body: const SafeArea(
+        body: SafeArea(
           child: SingleChildScrollView(
-            child: PageContent(),
+            child: PageContent(model: model),
           ),
         ),
       ),
